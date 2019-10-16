@@ -1,10 +1,9 @@
 public class Point {
   
-  private int score;
   
   public Point(){ }
   
-  public void setScore(){
+  public void setBonusScore(){
     if(isBonus1Visible){
       if (ball.isBallTouchesBonues(bonus1.positionX, bonus1.positionY)){
         isBonus1Visible = false;
@@ -25,6 +24,8 @@ public class Point {
       }
     }
   }
+  
+
   public void showScore(){
       textSize(20);
       fill(200);
@@ -32,7 +33,7 @@ public class Point {
   }
   
   void draw(){
-    setScore();
+    setBonusScore();
     showScore();
   }
 }

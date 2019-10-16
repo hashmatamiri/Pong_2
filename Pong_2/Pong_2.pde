@@ -10,7 +10,7 @@ Bonus bonus3;
 Point point;
 
 ArrayList<Bricks> bricksList = new ArrayList<Bricks>();
-
+public int score = 0;
 PImage evils, bonus;
 boolean isBonus1Visible = true;
 boolean isBonus2Visible = true;
@@ -30,7 +30,7 @@ void setup(){
 
   paddle = new Paddle(width/2 - 50 , height/2 + 250, 100, 20, 10, 10);
   ball = new Ball(width/2, height/2 - 50, 20, 20, 2.5, 3.2);
-  //bricks = new Bricks(0,0,0,0);
+  bricks = new Bricks(0,0,0,0);
   evilRight = new Evils(width - 80, height/2, 40, 40, 0.5, 1);
   evilLeft = new Evils(width - width + 80, height/2, 40, 40, -1.0, -0.8);
   line = new Line(width, height - 40);
@@ -119,6 +119,7 @@ public void buildBricks(Bricks[][] newBrickArray){
        bricks.draw();
       if(bricks.ballTouchesBricks(ball.positionX, ball.positionY)){
       ball.speedY = ball.speedY * -1;   
+      score++;
     }
  }
   }
