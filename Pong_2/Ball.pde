@@ -38,7 +38,7 @@ public class Ball extends Sprite{
   
   public void restrictBallY(){
       moveBallDown();
-    if(moveBallDown() >= height || moveBallUp() <= 0)
+    if(moveBallUp() <= 0)
       speedY = speedY * -1; 
   }
   

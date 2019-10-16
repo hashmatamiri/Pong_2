@@ -8,6 +8,7 @@ Bonus bonus1;
 Bonus bonus2;
 Bonus bonus3;
 Point point;
+GameOver gameOver;
 
 ArrayList<Bricks> bricksList = new ArrayList<Bricks>();
 public int score = 0;
@@ -40,6 +41,7 @@ void setup(){
   evils =  loadImage("Evil.png");
   bonus =  loadImage("Bonus.png");
   point = new Point();
+  gameOver = new GameOver();
   
   
   bricksList.add(new Bricks(0,0,50,20));
@@ -80,6 +82,7 @@ void draw(){
  evilRight.draw();
  evilLeft.draw(); 
  point.draw();
+ gameOver.draw();
  drawBonusVisibility();
  //buildBricks(brickArray);
  //buildBricks2(brickArray2);
