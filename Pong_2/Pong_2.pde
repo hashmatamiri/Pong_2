@@ -35,42 +35,16 @@ void setup(){
   evilRight = new Evils(width - 80, height/2, 40, 40, 0.5, 1);
   evilLeft = new Evils(width - width + 80, height/2, 40, 40, -1.0, -0.8);
   line = new Line(width, height - 40);
-  bonus1 = new Bonus(width/2,  100, 20, 20);
-  bonus2 = new Bonus(width - 70,  height/2 - 80, 20, 20);
-  bonus3 = new Bonus(70,  height/2 - 80, 20, 20);
+  bonus1 = new Bonus(width/2,  80, 20, 20);
+  bonus2 = new Bonus(width - 40, 70, 20, 20);
+  bonus3 = new Bonus(45, 70, 20, 20);
   evils =  loadImage("Evil.png");
   bonus =  loadImage("Bonus.png");
   point = new Point();
   gameOver = new GameOver();
   
   
-  bricksList.add(new Bricks(0,0,50,20));
-        bricksList.add(new Bricks(1 * brickPositionX, 1 * brickPositionY,50,20));
-        bricksList.add(new Bricks(2 * brickPositionX, 2 * brickPositionY,50,20));
-        bricksList.add(new Bricks(3 * brickPositionX, 3 * brickPositionY,50,20));
-        bricksList.add(new Bricks(4 * brickPositionX, 4 * brickPositionY,50,20));
-        bricksList.add(new Bricks(5 * brickPositionX, 5 * brickPositionY,50,20));
-        
-        bricksList.add(new Bricks(5 * brickPositionX,0,50,20));
-        bricksList.add(new Bricks(4 * brickPositionX, 1 * brickPositionY,50,20));
-        bricksList.add(new Bricks(3 * brickPositionX, 2 * brickPositionY,50,20));
-        bricksList.add(new Bricks(2 * brickPositionX, 3 * brickPositionY,50,20));
-        bricksList.add(new Bricks(1 * brickPositionX, 4 * brickPositionY,50,20));
-        bricksList.add(new Bricks(0 * brickPositionX, 5 * brickPositionY,50,20));    
-        
-        bricksList.add(new Bricks(6 * brickPositionX,0,50,20));
-        bricksList.add(new Bricks(7 * brickPositionX, 1 * brickPositionY,50,20));
-        bricksList.add(new Bricks(8 * brickPositionX, 2 * brickPositionY,50,20));
-        bricksList.add(new Bricks(9 * brickPositionX, 3 * brickPositionY,50,20));
-        bricksList.add(new Bricks(10 * brickPositionX, 4 * brickPositionY,50,20));
-        bricksList.add(new Bricks(11 * brickPositionX, 5 * brickPositionY,50,20));
-        
-        bricksList.add(new Bricks(11 * brickPositionX,0,50,20));
-        bricksList.add(new Bricks(10 * brickPositionX, 1 * brickPositionY,50,20));
-        bricksList.add(new Bricks(9 * brickPositionX, 2 * brickPositionY,50,20));
-        bricksList.add(new Bricks(8 * brickPositionX, 3 * brickPositionY,50,20));
-        bricksList.add(new Bricks(7 * brickPositionX, 4 * brickPositionY,50,20));
-        bricksList.add(new Bricks(6 * brickPositionX, 5 * brickPositionY,50,20));
+
 }
 
 void draw(){
@@ -87,6 +61,7 @@ void draw(){
  //buildBricks(brickArray);
  //buildBricks2(brickArray2);
 showBricks();
+bricksList();
 }
 
 private void drawBonusVisibility(){
@@ -114,6 +89,33 @@ public void buildBricks(Bricks[][] newBrickArray){
   }
   
   public ArrayList<Bricks> bricksList(){
+        bricksList.add(new Bricks(0,0,50,20));
+        bricksList.add(new Bricks(1 * brickPositionX, 1 * brickPositionY,50,20));
+        bricksList.add(new Bricks(2 * brickPositionX, 2 * brickPositionY,50,20));
+        bricksList.add(new Bricks(3 * brickPositionX, 3 * brickPositionY,50,20));
+        bricksList.add(new Bricks(4 * brickPositionX, 4 * brickPositionY,50,20));
+        bricksList.add(new Bricks(5 * brickPositionX, 5 * brickPositionY,50,20));
+        
+        bricksList.add(new Bricks(5 * brickPositionX,0,50,20));
+        bricksList.add(new Bricks(4 * brickPositionX, 1 * brickPositionY,50,20));
+        bricksList.add(new Bricks(3 * brickPositionX, 2 * brickPositionY,50,20));
+        bricksList.add(new Bricks(2 * brickPositionX, 3 * brickPositionY,50,20));
+        bricksList.add(new Bricks(1 * brickPositionX, 4 * brickPositionY,50,20));
+        bricksList.add(new Bricks(0 * brickPositionX, 5 * brickPositionY,50,20));    
+        
+        bricksList.add(new Bricks(6 * brickPositionX,0,50,20));
+        bricksList.add(new Bricks(7 * brickPositionX, 1 * brickPositionY,50,20));
+        bricksList.add(new Bricks(8 * brickPositionX, 2 * brickPositionY,50,20));
+        bricksList.add(new Bricks(9 * brickPositionX, 3 * brickPositionY,50,20));
+        bricksList.add(new Bricks(10 * brickPositionX, 4 * brickPositionY,50,20));
+        bricksList.add(new Bricks(11 * brickPositionX, 5 * brickPositionY,50,20));
+        
+        bricksList.add(new Bricks(11 * brickPositionX,0,50,20));
+        bricksList.add(new Bricks(10 * brickPositionX, 1 * brickPositionY,50,20));
+        bricksList.add(new Bricks(9 * brickPositionX, 2 * brickPositionY,50,20));
+        bricksList.add(new Bricks(8 * brickPositionX, 3 * brickPositionY,50,20));
+        bricksList.add(new Bricks(7 * brickPositionX, 4 * brickPositionY,50,20));
+        bricksList.add(new Bricks(6 * brickPositionX, 5 * brickPositionY,50,20));
       return bricksList;
   }
   
