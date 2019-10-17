@@ -16,8 +16,10 @@ PImage evils, bonus;
 boolean isBonus1Visible = true;
 boolean isBonus2Visible = true;
 boolean isBonus3Visible = true;
+boolean isGameOver;
 float brickPositionX = 60;
 float brickPositionY = 30;
+
 
 int _width = 1 ;
 int _height = 1;
@@ -159,6 +161,15 @@ public void drawBricks(){
     }
   println();
 
+  }
+  
+ void mousePressed(){
+    if(gameOver.getGameOver()){
+       if(mousePressed){
+         ball = new Ball(width/2, height/2 - 50, 20, 20, 2.5, 3.2); // Write a better syntax for this line of code. Try to use the sprite methods.
+
+      }
+    }
   }
   
 void keyPressed(){
