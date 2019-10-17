@@ -1,11 +1,13 @@
 public class GameOver {
   
   
-  public void ballCrossHeight(){
-   if(ball.moveBallDown() >= height){
+  public boolean ballCrossHeight(){
+   if(ball.moveBallDown() > height){
      speedXNull();
      speedYNull();
+     return true;
    }
+   return false;
   }
   
   private float speedXNull(){
@@ -17,11 +19,15 @@ public class GameOver {
   }
   
   public void gameOver(){
-    
+    if(ballCrossHeight()){
+      textSize(20);
+      text("Game Over", width/2 - 50, height/2);
+    }
   }
  
   
  void draw(){
    ballCrossHeight();
+   gameOver();
  }
 }
