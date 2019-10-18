@@ -19,8 +19,6 @@ boolean isBonus3Visible = true;
 boolean isGameOver;
 float brickPositionX = 60;
 float brickPositionY = 30;
-
-
 int _width = 1 ;
 int _height = 1;
 Bricks[][] brickArray;
@@ -44,9 +42,6 @@ void setup(){
   bonus =  loadImage("Bonus.png");
   point = new Point();
   gameOver = new GameOver();
-  
-  
-
 }
 
 void draw(){
@@ -168,7 +163,6 @@ public void drawBricks(){
        if(mousePressed){
          ball = new Ball(width/2, height/2 - 50, 20, 20, 2.5, 3.2); // Write a better syntax for this line of code. Try to use the sprite methods.
          score = 0;
-
       }
     }
   }
