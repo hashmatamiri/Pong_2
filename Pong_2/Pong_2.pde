@@ -62,8 +62,8 @@ void draw(){
  drawBonusVisibility();
  //buildBricks(brickArray);
  //buildBricks2(brickArray2);
-showBricks();
-bricksList();
+ showBricks();
+ bricksList();
 }
 
 private void drawBonusVisibility(){
@@ -167,6 +167,7 @@ public void drawBricks(){
     if(gameOver.getGameOver()){
        if(mousePressed){
          ball = new Ball(width/2, height/2 - 50, 20, 20, 2.5, 3.2); // Write a better syntax for this line of code. Try to use the sprite methods.
+         score = 0;
 
       }
     }
