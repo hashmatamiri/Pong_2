@@ -30,7 +30,7 @@ void setup(){
  // brickArray2 = new String[_width][_height];
 
   paddle = new Paddle(width/2 - 50 , height/2 + 250, 100, 20, 10, 10);
-  ball = new Ball(width/2, height/2 - 50, 20, 20, 2.5, 3.2);
+  ball = new Ball(width/2, height/2 - 50, 20, 20, 1.5, 3.2);
   bricks = new Bricks(0,0,0,0);
   evilRight = new Evils(width - 80, height/2, 40, 40, 0.5, 1);
   evilLeft = new Evils(width - width + 80, height/2, 40, 40, -1.0, -0.8);
@@ -42,6 +42,8 @@ void setup(){
   bonus =  loadImage("Bonus.png");
   point = new Point();
   gameOver = new GameOver();
+  bricksList();
+
 }
 
 void draw(){
@@ -58,7 +60,6 @@ void draw(){
  //buildBricks(brickArray);
  //buildBricks2(brickArray2);
  showBricks();
- bricksList();
 }
 
 private void drawBonusVisibility(){
@@ -120,11 +121,12 @@ public void buildBricks(Bricks[][] newBrickArray){
     for(Bricks bricks : bricksList){ //Draw bricks with coding hard
        bricks.draw();
       if(bricks.ballTouchesBricks(ball.positionX, ball.positionY)){
-      ball.speedY = ball.speedY * -1;   
-      score++;
+          ball.speedY = ball.speedY * -1;   
+          score++;
+      }
     }
- }
   }
+  
 public void drawBricks(){
   for(Bricks[] elem : brickArray){  //Draw bricks without coding hard (NEED WORK TO BE FULFILLED)
     for(Bricks bricks : elem){
